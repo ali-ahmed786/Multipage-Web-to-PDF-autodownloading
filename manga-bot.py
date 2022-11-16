@@ -1,7 +1,7 @@
 import pyautogui
 import time
 
-chapter = 103
+chapter = 1 
 def nextChapter(chapter):
     nextLocation = pyautogui.locateOnScreen('next.png', confidence=0.7)
     if (pyautogui.locateOnScreen('next.png', confidence=0.5) is not None):
