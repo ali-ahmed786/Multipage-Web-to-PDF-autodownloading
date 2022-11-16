@@ -17,7 +17,7 @@ def nextChapter(chapter):
         if(pyautogui.locateOnScreen('customised.png', confidence=0.7) is not None):
             pyautogui.click(customPagesOptionLocation)
             time.sleep(1)
-            pyautogui.write('1-20')
+            pyautogui.write('1-20') #customising the pages being downloaded as pdf
             printBtnLocation = pyautogui.locateOnScreen('printbtn.png', confidence=0.7)
             pyautogui.click(printBtnLocation)
             time.sleep(3)
@@ -55,7 +55,7 @@ def findnext(chapter):
     scrollAndPrint(chapter)
             
     
-def scrollAndPrint(chapter):
+def scrollAndPrint(chapter): #scroll again to move to the next chapter
     condition = False
     while (pyautogui.locateOnScreen('next.png', confidence=0.7) is None):
         scroll()
@@ -63,7 +63,7 @@ def scrollAndPrint(chapter):
             
     
     
-def scroll():
+def scroll(): #function to scrol so the all the manga panels are loaded so the pdf does not have any blank pages due to unloaded image panels
     time.sleep(0.5)
     pyautogui.scroll(-800)
 
